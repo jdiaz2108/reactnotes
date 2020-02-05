@@ -24,7 +24,11 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-    {this.state.notes.map(note => ( <Note id="{note.id}" content="{note.content}"/>) )}
+              {
+                  this.state.notes.map((note) => (
+                    <Note key={note.id} note={note}>{note}</Note> 
+                  ))
+              }
           <a
             className="App-link"
             href="https://reactjs.org"

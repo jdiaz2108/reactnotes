@@ -4,14 +4,14 @@ class Note extends Component {
 
     constructor(props) {
         super(props);
-        this.id = this.props.id
+        this.note = this.props.note
     }
 
     render() {
         return (
-        <div key="{this.id}">
-            {this.id}
-        </div>
+            <div>
+                {this.note.content}
+            </div>
         )
     }
 }

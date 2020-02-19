@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Note from './components/Note';
+import House from './components/House';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      notes: [
-        {id: 1, content: 'first'},
-        {id: 2, content: 'scnd'},
-        {id: 3, content: 'trd'},
+      houses: [
+        {id: 1, color: 'gray', door: 'wood', windows: 'iron', yard: 'grass'},
+        {id: 2, color: 'blue', door: 'wood', windows: 'iron', yard: 'grass'},
+        {id: 3, color: 'red', door: 'wood', windows: 'iron', yard: 'grass'},
       ]
     };
   }
@@ -25,16 +25,14 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
               {
-                  this.state.notes.map((note) => (
-                    <Note key={note.id} note={note}>{note}</Note> 
+                  this.state.houses.map((house) => (
+                    <House key={house.id} house={house}></House> 
                   ))
               }
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer">
             Learn React its working
           </a>
         </header>
